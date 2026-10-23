@@ -30,7 +30,7 @@ fn main(){
 //read_line creates an enumeration named "result". what it does
 //this enumeration creates a status, 1. ok means successful
 //or err means unsuccessful.
-//the values of "RESULT" type creates a method named expect.
+//the values of "RESULT" type create a method named expect.
 //if result has err value then the program will crash desplaying
 //the "---" message inside expect method.
 //if i dont really use expect, i'll get a warnign while debugging

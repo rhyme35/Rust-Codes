@@ -1,13 +1,10 @@
-use std::io; 
+use std::io;
 //input output library comes from a standard library std.
 //so what i did taking io into scope using use.
 //the set of library comes by default is called prelude
 fn main(){
-	println!("Guess the number");
-
-	println!("please input your guess.");
-
-	let mut guess= String::new();
+	println!("Guess the fucking number: ");
+	let mut guess=String::new();
 //let is used for creating a variable like "let rhyme= 5" 
 //by default variables are immutable means once it is set, it wont
 //be changed. so "mut" is used to make it mutable or changing
@@ -17,13 +14,15 @@ fn main(){
 //tldr: the line meant it has created a mutable variable named guess
 //which is bound to a new, empty instance of a string type.
 	io::stdin()
-//we could've write std::io::stdin, yeah its like using namespace std
 		.read_line(&mut guess)
+		.expect("Failed to read your value.");
+//we could've write std::io::stdin, yeah its like using namespace std
+	println!("you guessed: {guess}");
 //read line is a method in standard input handle to get the input
 //its like scanf in c, cin in cpp and input in python.
 //we pass the string as an argument. & means a reference. 
 //references are immutable by default and therefore we are using &mut
-		.expect("Failed to real line");
+		
 //note that the method all can be written in one line.
 //see the semi-colon at the end of this line.
 //it is wise to break lines whenever method.name() comes.
